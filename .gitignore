@@ -32,3 +32,4 @@ Thumbs.db
 
 # Nested original project archives
 ui-original-screens/*.zip
+backend/app/ml/data/email_dataset.csv
