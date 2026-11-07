@@ -16,8 +16,17 @@ from .modules.ip_analyzer import analyze_ip
 
 Base.metadata.create_all(bind=engine)
 app=FastAPI(title="AI-Powered Email Threat Detection & Forensic Intelligence API", version="4.0.0")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173","http://127.0.0.1:5173"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://the-ciphers.vercel.app"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 def client_ip(request: Request) -> str:
     # By default use the direct peer address. Do not trust forwarded headers unless
     # the deployment explicitly places CHIPERS behind a trusted proxy.
