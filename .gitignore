@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Database and private backups
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Node
+node_modules/
+dist/
+
+# Large installers and archives
+*.msi
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Nested original project archives
+ui-original-screens/*.zip

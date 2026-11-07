@@ -1,0 +1,2 @@
+import * as React from 'react'; import {cn} from '@/lib/utils';
+export function Switch({defaultChecked=false,className,...p}:any){const [on,setOn]=React.useState(defaultChecked);return <button type="button" onClick={()=>setOn(!on)} className={cn('w-10 h-6 rounded-full p-1 transition',on?'bg-red-600':'bg-white/15',className)} {...p}><span className={cn('block size-4 rounded-full bg-white transition',on?'translate-x-4':'translate-x-0')}/></button>}
