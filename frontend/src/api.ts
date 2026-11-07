@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const API = 'https://the-ciphers.onrender.com';
 
 export type User = { id:number; name:string; email:string; role:string; created_at:string };
 export type Email = { id:number; sender:string; recipient:string; subject:string|null; body:string|null; threat_level:string; investigation_id:number|null; created_at:string };
